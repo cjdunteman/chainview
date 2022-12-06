@@ -13,7 +13,7 @@ function App({ Component, pageProps }: AppProps) {
     <WagmiConfig client={client}>
       <ConnectKitProvider>
         <NextHead>
-          <title>My wagmi + ConnectKit App</title>
+          <title>ChainView</title>
         </NextHead>
 
         {mounted && <Component {...pageProps} />}

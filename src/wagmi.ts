@@ -1,7 +1,7 @@
 import { getDefaultClient } from 'connectkit'
 import { createClient } from 'wagmi'
 
-const alchemyId = process.env.ALCHEMY_API_KEY;
+const alchemyId = process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
 
 export const client = createClient(
   getDefaultClient({

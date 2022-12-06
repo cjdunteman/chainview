@@ -18,7 +18,7 @@ function Page() {
   const { address, isConnected } = useAccount()
 
   useEffect(() => {
-    getTokenBalances(setTokenBalances);
+    getTokenBalances(address, setTokenBalances);
   }, []);
   console.log(tokenBalances)
 
@@ -32,7 +32,7 @@ function Page() {
       {tokenBalances.map((token, index) => {
         return (
         <Fragment key={token.symbol}>
-          <p>{token.tokenBalance} {token.name} Test</p>
+          <p>{token.tokenBalance} {token.name}</p>
         </Fragment>
         )
       })}

@@ -9,9 +9,9 @@ const settings = {
 
 const alchemy = new Alchemy(settings);
 
-export default async function GetTokenBalances(setTokenBalances) {
+export default async function GetTokenBalances(address, setTokenBalances) {
   //Feel free to switch this wallet address with another address
-  const ownerAddress = "0x00000000219ab540356cbb839cbe05303d7705fa";
+  const ownerAddress = address;
 
   // Get all token balances
   const data = await alchemy.core.getTokenBalances(ownerAddress);
